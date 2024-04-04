@@ -86,3 +86,43 @@ console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));// this will give us all the objects which will be stored inside another object
 
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+// Destructing of object
+
+const course = {
+    coursename : "JavaScript-Hindi",
+    price : 0 ,
+    courseInstructer : "Hitesh"
+}
+
+// Now if we want to access courseInstructer we have to write course.courseInstructer again and again which will be lengthy 
+// process . That's why we will destructure object
+
+const {courseInstructer : Instructer} = course
+console.log(Instructer); 
+
+// An example of how this destructuring of objects work in react . In react there is default object props . So now if we
+// want to access any elements inside props so we have to write props.elementsname again and again and this will make the
+// code lengthy so we will destructure the props 
+
+const navbar = ({comapany}) => {
+
+}
+
+navbar(comapany = "hitesh")
+
+// API : jab humko apna kaam kisi ke sar pr daalna ho 
+/*
+APIs are mechanisms that enable two software components to communicate with each other using a set of definitions and 
+protocols. For example, the weather bureau's software system contains daily weather data. The weather app on your phone “talks”
+ to this system via APIs and shows you daily weather updates on your phone.
+
+ To handle api earlier XML was used but it was very lengthy but now json is used . The syntax of json is same as of object but
+ the only difference is that in json the keys are also written in double quotes.
+*/ 
+
+{
+    "name" : "karan",
+    "coreseName" : "JavaScript-Hindi",
+    "price" : "free"
+}
